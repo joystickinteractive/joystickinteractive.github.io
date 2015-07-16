@@ -15,33 +15,59 @@
 <meta name="twitter:title" content="Joystick Interactive">
 <meta name="twitter:description">
   
+    <link rel="alternative" href="/atom.xml" title="Joystick Interactive" type="application/atom+xml">
   
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/dev/css/style.css" type="text/css">
   
 
 </head>
 <body>
   <div id="container">
-    <header id="header">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
   <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Joystick Interactive</a>
+      </h1>
+      
+    </div>
     <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon"></a>
-      <a id="logo" class="logo" href="/"></a>
       <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
         
       </nav>
       <nav id="sub-nav">
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://joystickinteractive.github.io/dev"></form>
-        </div>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://joystickinteractive.github.io/dev"></form>
+      </div>
     </div>
   </div>
 </header>
-    <section id="main" class="outer">
-      <article id="post-best-practices" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-best-practices" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/dev/2015/07/16/best-practices/" class="article-date">
+  <time datetime="2015-07-16T14:56:14.000Z" itemprop="datePublished">2015-07-16</time>
+</a>
+    
+  </div>
   <div class="article-inner">
     
     
@@ -55,19 +81,13 @@
 
       </header>
     
-    <div class="article-meta">
-      <a href="/dev/2015/07/16/best-practices/" class="article-date">
-  <time datetime="2015-07-16T14:56:14.000Z" itemprop="datePublished">2015-07-16</time>
-</a>
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="Code_for_Humans">Code for Humans</h3><p>Prefer code which is easy for humans to read. Our business is based on files of (mostly) text. The easier it is for us to read, search, and manipulate these files the better.</p>
 <p>Quality deliverables are essential for professionals. Sloppy or messy deliverables are unprofessional and reflect poorly on the final product and the delivery team. Please remove legacy files, be certain the work is delivered in a clean file system, and in an orderly, logical structure that serves a clear purpose.</p>
-<h4 id="Readable_Code">Readable Code</h4><p>When it comes to reading the code, we can have consistent formatting of code within a given project. To easily achieve this, get the machine to help you out. <em>Do</em> use dotfiles such as <code>.editorconfig</code> and <code>.jshintrc</code> to scan your code for compliance. These both have plugins for <a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank" rel="external">Sublime Text</a> <strong>and</strong> <a href="https://github.com/sindresorhus/atom-editorconfig#readme" target="_blank" rel="external">Atom</a></p>
-<p>The exact formatting of code isn’t nearly as important as consistency. So we <em>must not</em> reformat an entire project’s files just to have our own code formatting in place.</p>
+<h4 id="Readable_Code">Readable Code</h4><p>When it comes to reading the code, we can have consistent formatting of code within a given project. To easily achieve this, get the machine to help you out. <em>Do</em> use dotfiles such as <code>.editorconfig</code> and <code>.jshintrc</code> to scan your code for compliance. These both have plugins for <a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank" rel="external">Sublime Text</a> <em>and</em> <a href="https://github.com/sindresorhus/atom-editorconfig#readme" target="_blank" rel="external">Atom</a></p>
+<p>The exact formatting of code isn’t nearly as important as consistency. To be consistent without having to think too much about it, <strong>do install</strong> the JsFormat package for Sublime Text and adjust the settings so that it automatically formats your JS anytime you save a file. To do this go to the Sublime Text 2 &gt; Preferences &gt; Package Settings &gt; JsFormat &gt; Settings - User menu and add <code>{&quot;format_on_save&quot;: true}</code>. <a href="https://github.com/jdc0589/jsformat-atom" target="_blank" rel="external">For the Atom editor</a> the “format on save” preference is set to true by default.</p>
+<p>We <strong>must not</strong> reformat an entire project’s files just to have our own code formatting in place.</p>
 <p>Here are our configurations for <a href="https://slack-files.com/T02G6V7FQ-F07A1LDSP-28cfa44c60" target="_blank" rel="external">hinting/linting with JsHint</a> as well as our <a href="https://slack-files.com/T02G6V7FQ-F07A1JNBU-74f9b306dd" target="_blank" rel="external">default editor config</a>. Copy these over into existing projects and any new projects going forward.</p>
 <p>All code should look like one person typed it. Using the tools described above will help us achieve this goal.</p>
 <h4 id="Searchable_Code">Searchable Code</h4><p>Just two simple rules here that will allow your code to be more searchable:</p>
@@ -77,35 +97,30 @@
 </ol>
 <h4 id="Keep_all_files_in_a_git_repository-_Publish_to_Github-">Keep all files in a git repository. Publish to Github.</h4><p>If it isn’t in git it doesn’t exist. This is how we make it easy to manipulate files, across the board. It is easier to make a branch and push it to Github, than it is to zip it and send it over slack, or to paste it into Pastebin, or other snippet-sharing sites.</p>
 <h3 id="But_Rely_on_Machines_to_do_the_Dumb_Stuff">But Rely on Machines to do the Dumb Stuff</h3><p>WHo wants to spend time fixing indentation of code? Or alphabetizing the CSS rules and properties in the stylesheets? That’s where machines come in. There is a small set of plugins available for any modern editor that <em>we must use</em>.</p>
-<h3 id="Markup">Markup</h3><p>Your markup should be <a href="https://en.wikipedia.org/wiki/Semantic_HTML" target="_blank" rel="external">semantic</a> as well as <a href="https://validator.w3.org/" target="_blank" rel="external">valid</a>. It should always use an HTML5 Doctype.</p>
-<p>Make sure to use the header tags to delineate an outline of your documents. And keep it to one single <code>&lt;h1&gt;</code> in the document.</p>
-<p>Obviously, use tables <em>only for tabular data</em>. And use lists (ordered and unordered) for content which calls for it. Likewise, use definition lists <code>&lt;dl&gt;</code> for anything which is a list of name/value pairs.</p>
+<h3 id="Markup">Markup</h3><p>Your markup should be <a href="https://en.wikipedia.org/wiki/Semantic_HTML" target="_blank" rel="external">semantic</a> as well as <a href="https://validator.w3.org/" target="_blank" rel="external">valid</a>. It should always use an HTML5 Doctype. Make sure to use the header tags to delineate an outline of your documents. And keep it to one single <code>&lt;h1&gt;</code> in the document. Use tables <em>only for tabular data</em>. And use lists (ordered and unordered) for content which calls for it. Likewise, use definition lists <code>&lt;dl&gt;</code> for anything which is a list of name/value pairs.</p>
 <p>When in doubt about the usage of HTML5 tags, <a href="http://html5doctor.com/element-index/" target="_blank" rel="external">consult the descriptions you’ll find on HTML5Doctor</a>.</p>
 <p>Also, <em>do</em> use microformats for things like <a href="http://microformats.org/code/hcard/creator" target="_blank" rel="external">phone numbers and addresses</a> as well as <a href="http://microformats.org/code/hcalendar/creator" target="_blank" rel="external">calendar events</a>. Using this technique will give users a much improved experience. Phone numbers will become clickable elements, events will be easy to import into a device’s calendar, by using microformats. Familiarize yourself with the <a href="http://microformats.org/wiki/Main_Page" target="_blank" rel="external">front page of their wiki</a> to find out more about the available formats.</p>
-<p>As another favor to the user, <em>do</em> use <code>&lt;label&gt;</code> tags for all form fields, especially in the case of checkboxes and radio-buttons, so that those with fat fingers can easily check off the boxes.</p>
 <p>Generally all <code>&lt;script&gt;</code> tags belong at the bottom of the page, just before the closing <code>&lt;/body&gt;</code> tag.</p>
 <p>Do not use all caps or all lowercase titles in markup, instead apply the CSS property text-transform:uppercase/lowercase.</p>
-<p>It is nice to have HTML comments at the closing of elements, to indicate which tag above is being closed.</p>
+<p>Please <em>do use</em> HTML comments at the closing of elements, to indicate which tag above is being closed.</p>
 <h4 id="Forms">Forms</h4><p>For both semantic and functional reasons, we make full use of the <code>&lt;form&gt;</code> tag for all sections requiring user input. All form <code>action</code> attributes should point to URLs with user-readable content, so they will still work if the form is submitted by the user before JavaScript has loaded on a page, or if JavaScript is broken, disabled, or not supported. This will require that the back-end be able to return a full HTML page for form submission (e.g. registering a new user, editing the quantity in a shopping cart).</p>
 <p>Do not nest HTML form elements.</p>
-<h4 id="Input_Labels">Input Labels</h4><p>All input fields should be associated with a <code>&lt;label&gt;</code> element. The <code>for</code> attribute of the <code>&lt;label&gt;</code> element should contain the ID of the corresponding input field. This means the input field will receive focus when a user clicks the label and also enables screen readers for sight-impaired users to read out an appropriate description of the input field.</p>
+<p>All input fields should be associated with a <code>&lt;label&gt;</code> element. The <code>for</code> attribute of the <code>&lt;label&gt;</code> element should contain the ID of the corresponding input field. This means the input field will receive focus when a user clicks the label and also enables screen readers for sight-impaired users to read out an appropriate description of the input field.</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">label</span> <span class="keyword">for</span>=<span class="string">"home-address"</span>&gt;Home Address&lt;/<span class="keyword">label</span>&gt;</span><br><span class="line">&lt;<span class="keyword">input</span> id=<span class="string">"home-address"</span> <span class="keyword">type</span>=<span class="string">"text"</span>&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="Styling">Styling</h3><p>A reset stylesheet is <em>a must</em>. Our preference is to use <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="external">normalize.css</a>. For highly stylized projects one could make a good argument for preferring the <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank" rel="external">Meyer Reset</a>. But nothing goes out the door without some type of reset stylesheet.</p>
-<p>Prefer classes to IDs when writing your style rules.</p>
-<p>Avoid qualifying an ID or class selector with an element. In other words avoid <code>div#some-id</code> and <code>div.some-class</code>. Instead use <code>#some-id</code> and <code>.some-class</code>.</p>
-<p>If you specify multiple selectors, it’s a good idea to start each on new line.</p>
-<p>Also, prefer <code>kebab-case-class-names</code> for your class names and IDs, <code>camelCase</code> is for JavaScript only.</p>
+<p>Prefer classes to IDs when writing your style rules. Avoid qualifying an ID or class selector with an element. In other words avoid <code>div#some-id</code> and <code>div.some-class</code>. Instead use <code>#some-id</code> and <code>.some-class</code>.</p>
+<p>When you specify multiple selectors, it’s a good idea to start each on new line.</p>
+<p><strong>Do use</strong> <code>kebab-case-class-names</code> for your class names and IDs, <code>camelCase</code> is for JavaScript only.</p>
 <p>Unlike HTML, we don’t care so much about validating CSS. But we still want to rely on machines to help tame our CSS so <em>do</em> use tools like <a href="https://github.com/csscomb/sublime-csscomb" target="_blank" rel="external">CSScomb</a>.</p>
 <p>Shorthand rules can be difficult to use, but they do save on the number of bytes you must send down the wire. Prefer shorthand where you are providing length values for the four sides of a box, but prefer the long form in the case of background properties.</p>
-<p><em>Do not</em> use <code>!important</code>. Ever. The only exception is to override something which is being set by some CSS file which is not under our control.</p>
+<p><strong>Do not</strong> use <code>!important</code>. Ever. The only exception is to override something which is being set by some CSS file which is not under our control.</p>
 <p><em>Do</em> understand how browsers <a href="http://specificity.keegan.st/" target="_blank" rel="external">calculate specificity</a>. Know this material just as thoroughly as you know the box model. You should understand the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank" rel="external">box-sizing property</a>.</p>
-<h4 id="Prefer_Less/Sass/SCSS_to_Plain-Old_CSS">Prefer Less/Sass/SCSS to Plain-Old CSS</h4><p>A proper project will include a build tool of some sort, and this allows us to prefer Sass or Less to plain-old CSS. Use variables for color palettes and often reused measurements, use <a href="https://github.com/twbs/bootstrap/blob/master/less/mixins.less" target="_blank" rel="external">mixins to package up complex sets of rules</a>.</p>
-<h4 id="Units_px_vs-_em_vs-_rem_vs-_%_vs-_vh/vw">Units px vs. em vs. rem vs. % vs. vh/vw</h4><p>Here’s a common question, one which comes up all the time. “What units should I use?”. Perhaps the best reference out there for this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" target="_blank" rel="external">is over on Mozilla.org</a>. The different units fall into three buckets: font-relative, viewport-relative, and absolute lengths.</p>
-<p>The rule-of-thumb is to prefer rems to ems, and to only use a px value in cases where you’re working with a binary asset (images and videos mainly).</p>
+<p>We like Sass/SCSS/Less and use it when possible. This is one more reason to use a build process with your front-end code.</p>
+<h4 id="Units_px_vs-_em_vs-_rem_vs-_%_vs-_vh/vw">Units px vs. em vs. rem vs. % vs. vh/vw</h4><p>“What units should I use?” is a frequently asked question. The rule-of-thumb is to prefer rems to ems, and to only use a px value in cases where you’re working with a binary asset (images and videos mainly). <strong>Do use px</strong> for the font-size of the body element.</p>
 <p>Percentages are not actually a length, but very useful in developing a responsive site. The new <code>calc()</code> capability is widely supported and also useful in a variety of cases.</p>
-<p><em>Do use px</em> for the font-size of the body element.</p>
+<p>The best reference out there for this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" target="_blank" rel="external">is over on Mozilla.org</a>. </p>
 <h4 id="SVG_and_High_Pixel_Density_Displays">SVG and High Pixel Density Displays</h4><p>There are other good use-cases for SVG (Scalable Vector Graphics) but the big one is for icons on Retina displays.</p>
-<h4 id="Spriting">Spriting</h4><p>Use spriting liberally across your work to minimize the number of resources going down the wire. We rely on <a href="https://www.npmjs.com/package/spritesmith" target="_blank" rel="external">spritesmith</a> to work with a Grunt/Gulp build process, in order to kick out spritesheets. If your not using spritesmith there are other options available, <a href="http://www.spritecow.com/" target="_blank" rel="external">SpriteCow</a> for example.</p>
+<h4 id="Spriting">Spriting</h4><p>Use spriting liberally across your work to minimize the number of resources going down the wire. We rely on <a href="https://www.npmjs.com/package/spritesmith" target="_blank" rel="external">spritesmith</a> to work with a Grunt/Gulp build process, in order to kick out spritesheets. If you’re not using spritesmith there are other options available, <a href="http://www.spritecow.com/" target="_blank" rel="external">SpriteCow</a> for example.</p>
 <h4 id="Centering">Centering</h4><p>You should already be well aware of the typical means of horizontally centering elements in CSS</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.class</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">720px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>You might be less informed about the means of vertically centering content. Here’s the best way to do this right now:</p>
@@ -125,27 +140,26 @@
 <p>Remove any commented-out logging/debugging code.</p>
 <h4 id="Correctness">Correctness</h4><p>To protect against some hard to debug problems, a dev should adhere to the following:</p>
 <ol>
-<li>Use strict equality === comparisons</li>
-<li>Except…use == to check against null as this catches undefined</li>
+<li>Use strict equality === comparisons, but use == to check against null (this catches undefined)</li>
 <li>Specify the radix parameter when using <code>.parseInt()</code></li>
 <li>Pass an object with multiple properties, rather than passing many parameters to a function</li>
 <li>Use <code>var self = this</code> to keep a reference to the correct <code>this</code></li>
 <li>Express millisecond values in seconds like <code>var timeout = 30 * 1000;</code> rather than <code>var timeout = 30000;</code></li>
 <li>Do not modify built-in prototypes</li>
-<li>Do not use <code>eval()</code></li>
 <li>Do not use <code>with</code></li>
 <li>Do not use bitwise operators</li>
 </ol>
-<p>We abide by the guidelines laid out in <a href="http://amzn.to/1TyamBT" target="_blank" rel="external">Javascript: The Good Parts</a> by Crockford.</p>
+<p>We generally abide by the guidelines laid out in <a href="http://amzn.to/1TyamBT" target="_blank" rel="external">JavaScript: The Good Parts</a> by Crockford.</p>
 <h4 id="Performance">Performance</h4><p>The overarching rule is that performance optimization only comes <em>after</em> program correctness. So make it work and then if needed optimize it. Yet, there are a handful of rules which you should use from the outset, to prevent performance issues from cropping up later.</p>
 <p>The two primary performance pitfalls to avoid are 1) looping and 2) DOM manipulation.</p>
-<p>To avoid slow loops the following should help</p>
+<p>To avoid slow loops the following should help:</p>
 <ol>
 <li>Don’t nest loops more than 2 deep.</li>
 <li>A plain <code>for</code> loop will always be faster than a <code>$.each()</code> or an <code>_.each()</code>.</li>
 <li>If looping across an array <em>do not</em> recalculate the array length each run (see below)</li>
 <li>Build a string of markup across a loop and append it to the DOM one time at the end of the loop</li>
 <li>Use the <code>async</code> attribute on your <code>&lt;script&gt;</code> tags</li>
+<li>Do not use <code>eval()</code></li>
 </ol>
 <p>These looping tips are <em>especially</em> important when the for loop could be run many many times, such as during</p>
 <ul>
@@ -156,7 +170,7 @@
 </ul>
 <p>When it comes to improving performance while manipulating the DOM understand and follow the tips listed below to prevent triggering reflows of the DOM.</p>
 <ol>
-<li>Change classes on the element you wish to style (as low in the dom tree as possible)</li>
+<li>Change classes on the element you wish to style (as low in the DOM tree as possible)</li>
 <li>Avoid setting multiple inline styles</li>
 <li>Apply animations to elements that are position fixed or absolute</li>
 <li>Trade smoothness for speed</li>
@@ -178,16 +192,14 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li a'</span>)</span><br><span class="line">  .on(<span class="string">'click'</span>, doThings);</span><br><span class="line">  .addClass(<span class="string">'foo'</span>);</span><br><span class="line">  .fadeIn();</span><br></pre></td></tr></table></figure>
 <p>Also you should be aware of the <code>.end()</code> method in jQuery. It will allow you to move up and down the DOM without using selectors. Say the example above has some <code>&lt;img&gt;</code> tags in the <code>&lt;a&gt;</code> tags you might want to do something to the parent element of the original <code>&lt;li&gt;</code>. <code>.end()</code> will take you right back to the initial selection and allow you to easily move up and down the DOM without additional DOM selections. Here’s an example of this in action.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"li"</span>)</span><br><span class="line">  .hide()</span><br><span class="line">  .find(<span class="string">"a"</span>).text(<span class="string">"Click me"</span>).on(<span class="string">"click"</span>,doThings).end()</span><br><span class="line">  .parent().addClass(<span class="string">"testimonial"</span>).draggable().end()</span><br><span class="line">  .fadeIn(<span class="string">"slow"</span>);</span><br></pre></td></tr></table></figure>
-<p>Finally, although the selection engine that comes with jQuery (sizzle) can use most of the latest CSS3 selectors, you may want to avoid those for better performance.</p>
-<h3 id="Testing">Testing</h3><p>Nothing goes out without some testing. There are few absolutes in these guidelines, <strong>but this is one</strong>.</p>
-<p>A suite of automated Selenium tests with screenshots is an excellent way to get started with automated testing.</p>
-<h4 id="Testing_Environments">Testing Environments</h4><p>To say it is difficult to test a site that is constantly changing is an understatement. We prefer working in an environment with 3 different areas:</p>
+<h3 id="Testing">Testing</h3><p><strong>Nothing goes out without some testing</strong>. There are few absolutes in these guidelines, but this is one.</p>
+<h4 id="Testing_Environments">Testing Environments</h4><p>To say it is difficult to test a site that is constantly changing is an understatement. Our server setup typically has the following three environments:</p>
 <ul>
 <li>dev</li>
 <li>stage</li>
 <li>production</li>
 </ul>
-<p>A <strong>release</strong> moves from dev -&gt; stage and then once tested there, into the production environment. <em>Do not</em> make fiddly little changes when QA is in the middle of testing your work.</p>
+<p>A <em>release</em> moves from dev to stage and then once tested there, into the production environment. <strong>Do not</strong> make fiddly little changes when QA is in the middle of testing your work.</p>
 <h4 id="Supported_Browsers_&amp;_Devices">Supported Browsers &amp; Devices</h4><p>This is often times dictated by what’s in the Statement of Work (SOW), but when it is not you should target the following devices and browsers.</p>
 <ul>
 <li>IE 10 / 11</li>
@@ -202,12 +214,13 @@
 <p>Twitter Bootstrap is great because it covers accessibility, for those with vision impairment or hearing impairment.</p>
 <h3 id="Bug_Tracking">Bug Tracking</h3><p>Our preferred means of tracking issues is <a href="https://joystick.mydonedone.com" target="_blank" rel="external">Done Done</a>. Sometimes clients ask us to use their existing systems though, and there are some who would like to move to Jira for tracking bugs.</p>
 <h3 id="Git/Github">Git/Github</h3><p>There’s nothing better than git for tracking changes to your bytes and your files. We are makers of files, and these files are the product we sell. So there’s no one thing as important as these files. It’s why we use git &amp; Github.</p>
+<p>When you have a solid grasp of git you will gain a sense of fearlessness, that no matter what wild experiment you might try, and no matter how radical a refactoring you might undertake, you will be able to rollback to a known good version.</p>
 <p>There are a couple of different styles of working with git. The first is to spend lots of time changing your working files and putting together all of your work for a handful of fixes or features, finally wrapping them up into one or more commits and pushing them to the remote. The other way of working with git is to make many mindless commits throughout the work day, and then refashion your silly commits into a small set of sensible and logical commits.</p>
 <p>Branches should have a ticket number in the name, if working from a list of issues in Jira.</p>
-<p><em>Do not</em> use <code>git push --force</code>.</p>
-<p>Except for <code>git cherry-pick</code> avoid relying on git commands which feature a hyphen in the name. These kinds of commands are mainly aimed at those implementing changes to git itself, or to projects which are making tools for git. They’re referred to as “plumbing commands” in this <a href="https://git-scm.com/docs" target="_blank" rel="external">excellent cheatsheet of the major git commands</a></p>
-<h4 id="Merging">Merging</h4><p>Yes merging is hard. But if you’ve ever tried branching and merging in other source-control tools (SVN I’m looking at you!) then you know it is 10x worse with those tools. Git was made this branching &amp; merging in mind.</p>
-<p>When resolving conflics, there’s a good chance you will need to <em>actually speak to the other developer</em>. But this is why we have Slack. So don’t hesitate to reach out to the other dev and ask about their commits which are conflicting with your own.</p>
+<p><strong>Do not</strong> use <code>git push --force</code>.</p>
+<p>Except for <code>git cherry-pick</code> avoid relying on git commands which feature a hyphen in the name. These kinds of commands are mainly aimed at those implementing changes to git itself, or to projects which are making tools for git. They’re referred to as “plumbing commands” in this <a href="https://git-scm.com/docs" target="_blank" rel="external">excellent cheatsheet of the major git commands</a>.</p>
+<h4 id="Merging">Merging</h4><p>Yes merging is hard. But if you’ve ever tried branching and merging in other source-control tools (SVN I’m looking at you!) then you know it is 10x worse with those tools. Git was made with easy branching &amp; merging in mind.</p>
+<p>When resolving conflicts, there’s a good chance you will need to <em>actually speak to the other developer</em>. But this is why we have Slack. So don’t hesitate to reach out to the other dev and ask about their commits which are conflicting with your own.</p>
 <p>The routine for merging is a pretty simple process:</p>
 <ol>
 <li>Do a <code>git status</code> and see which files are in conflict</li>
@@ -221,7 +234,7 @@
 <li>I want all of their commits. Do <code>git checkout --theirs</code></li>
 <li>I want all of my commits. Do <code>git checkout --ours</code></li>
 <li>I’m confused I want to start over. Do <code>git checkout -m</code> - careful there is no undo with this!</li>
-<li>Bail hard. Do <code>git merge --abort</code>. Works with <code>git rebase</code> too.</li>
+<li>Bail out. Do <code>git merge --abort</code>. Works with <code>git rebase</code> too.</li>
 </ol>
 <p>If you <em>still</em> find merging difficult you might want to look into the <code>merge.conflictstyle diff3</code> git configuration option, which presents the conflicts a little differently. You might find this presentation more natural.</p>
 <p>And <a href="http://tedfelix.com/software/git-conflict-resolution.html" target="_blank" rel="external">do have a look at this</a> for a comprehensive take on when and how to resolve merge conflicts.</p>
@@ -240,30 +253,21 @@
 <p>Then find those commits using <code>git log</code> and use <code>git cherry-pick &lt;commit&gt;</code> to pluck bits and pieces of another branch onto your own branch.</p>
 <p>And to those who aren’t very good with git, let’s look at a couple of things you can do with git which might spur you to learn more…</p>
 <h4 id="The_Top_10_Git_Commands_You_(Maybe)_Aren’t_Using">The Top 10 Git Commands You (Maybe) Aren’t Using</h4><ol>
-<li>git checkout</li>
-<li>git diff</li>
-<li>git diff —cached</li>
-<li>git checkout -b</li>
-<li>git stash</li>
-<li>git stash pop</li>
-<li>git log</li>
-<li>git add</li>
-<li>git commit</li>
-<li>git blame</li>
-<li>git fetch</li>
-<li>git cherry-pick</li>
-<li>git bisect</li>
-</ol>
-<h4 id="Stupid_Git_Tricks">Stupid Git Tricks</h4><ul>
-<li><code>git bisect</code></li>
-<li><code>git show</code></li>
-<li>`git diff</li>
+<li><code>git checkout &lt;ref&gt;</code></li>
+<li><code>git diff &lt;ref&gt; &lt;ref&gt;</code></li>
+<li><code>git checkout -b</code></li>
+<li><code>git stash</code></li>
+<li><code>git stash pop</code></li>
+<li><code>git log</code></li>
 <li><code>git add -i</code></li>
-<li>Empty directories<ul>
-<li>git <em>does not</em> save directories. only files. use <code>mkdir &lt;dir-name&gt; &amp;&amp; touch &lt;dir-name&gt;/empty &amp;&amp; git add ./&lt;dir-name&gt;</code> to keep an empty folder around in git. this makes your new directory and writes a 0KB file to the folder.</li>
-</ul>
-</li>
-</ul>
+<li><code>git blame</code></li>
+<li><code>git fetch</code></li>
+<li><code>git cherry-pick</code></li>
+</ol>
+<h4 id="Stupid_Git_Tricks">Stupid Git Tricks</h4><h5 id="git_show"><code>git show</code></h5><p>If you want to look at a previous version of a file you can use this command. The command looks like this: <code>git show &lt;ref&gt;:path/to/some/file</code>. As in previous examples, you must replace “<ref>“ with any branch name or commit hash. You can combine this command with unix file-redirection operators to easily replace the current version of some file with a version of the same file from a previous commit: <code>git show &lt;ref&gt;:path/to/some/file &gt; path/to/some/file</code></ref></p>
+<h5 id="git_bisect"><code>git bisect</code></h5><p>Use this technique to hunt down the source of a bug or regressed bug. This is <em>not actually</em> going to use <code>git bisect</code>, this is the Poor Man’s version of bisect, using a series of <code>git checkout</code> commands to search through the history for the exact commit which caused the bug.</p>
+<h5 id="git_add_-i"><code>git add -i</code></h5><p>Use this command to select chunks of code from files to add to the staging area. If your file contains changes related to multiple bugfixes or features, you can use <code>git add -i</code> to hand-craft a commit which addresses just one of those fixes.</p>
+<h5 id="Empty_directories">Empty directories</h5><p>  git <strong>does not save directories</strong>. only files. use <code>mkdir &lt;dir-name&gt; &amp;&amp; touch &lt;dir-name&gt;/empty &amp;&amp; git add ./&lt;dir-name&gt;</code> to keep an empty folder around in git. this makes your new directory and writes a 0KB file to the folder.</p>
 <h4 id="Oh_Noes_My_Repo_is_Messed_Up">Oh Noes My Repo is Messed Up</h4><p><a href="http://justinhileman.info/article/git-pretty/git-pretty.png" target="_blank" rel="external">See the flow-chart here</a> on how you should proceed if your local repository is an unfixable mess.</p>
 <p><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/" target="_blank" rel="external">The Best Git Reference Out There</a></p>
 <h3 id="Operations">Operations</h3><h4 id="Monitoring">Monitoring</h4><p>Use a monitoring service. We need to know if our sites are not available. Both of these options are good.</p>
@@ -347,32 +351,95 @@
 
       
     </div>
-  
     <footer class="article-footer">
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/16/best-practices/" data-id="cic6ikvy20000sg986r4vuo5v" class="article-share-link">Share</a>
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li></ul>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/back-end/">back-end</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/front-end/">front-end</a></li></ul>
 
     </footer>
-  
   </div>
   
 </article>
 
 
-    </section>
-    <footer id="footer">
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/dev/tags/back-end/">back-end</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/dev/tags/best-practices/">best-practices</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/dev/tags/front-end/">front-end</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/dev/tags/back-end/" style="font-size: 10px;">back-end</a> <a href="/dev/tags/best-practices/" style="font-size: 10px;">best-practices</a> <a href="/dev/tags/front-end/" style="font-size: 10px;">front-end</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/dev/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/dev/2015/07/16/best-practices/">Best Practices</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 Joystick Interactive&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+      &copy; 2015 Joystick Interactive<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-<script src="/js/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
+
+  <link rel="stylesheet" href="/dev/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/dev/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 
 
 <script src="/dev/js/script.js" type="text/javascript"></script>
