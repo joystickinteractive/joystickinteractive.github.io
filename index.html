@@ -203,8 +203,8 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.moving-element</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">will-change</span>:<span class="value"> transform</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>For older browsers use the following instead:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.moving-element</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translateZ</span>(<span class="number">0</span>)</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h4 id="Web_Fonts">Web Fonts</h4><p>If you have a web font with too many glyphs, this can really bog down your website. There is <a href="https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py" target="_blank" rel="external">a Python tool</a> which you can use to trim out glyphs which are not needed.</p>
 <p>Finally, the Google website has a very in-depth <a href="https://developers.google.com/web/fundamentals/performance/index" target="_blank" rel="external">analysis of page performance techniques</a>.</p>
+<h4 id="Web_Fonts">Web Fonts</h4><p>If you have a web font with too many glyphs, this can really bog down your website. There is <a href="https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py" target="_blank" rel="external">a Python tool</a> which you can use to trim out glyphs which are not needed.</p>
 <h2 id="Scripting">Scripting</h2><p>Which specific code formatting convention you follow is not really important. What matters is that you provide a ruleset that is machine-readable and works with any linting/stylechecking tools available in Sublime or Atom. This is where our <a href="https://slack-files.com/T02G6V7FQ-F07A1LDSP-28cfa44c60" target="_blank" rel="external">shared JsHint ruleset</a> comes into play again.</p>
 <p>Variables in JavaScript should be <code>camelCase</code>, not <code>kebab-case</code> or <code>snake_case</code>. A class-constructor should be <code>TitleCase</code>.</p>
 <p>Do not pollute the global namespace. Use <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" target="_blank" rel="external">IIFE</a>s and objects to keep the count of global variables low. The module pattern is useful here. </p>
@@ -273,7 +273,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li a'</span>)</span><br><span class="line">  .on(<span class="string">'click'</span>, doThings);</span><br><span class="line">  .addClass(<span class="string">'foo'</span>);</span><br><span class="line">  .fadeIn();</span><br></pre></td></tr></table></figure>
 <p>Also you should be aware of the <code>.end()</code> method in jQuery. It will allow you to move up and down the DOM without using selectors. Say the example above has some <code>&lt;img&gt;</code> tags in the <code>&lt;a&gt;</code> tags you might want to do something to the parent element of the original <code>&lt;li&gt;</code>. <code>.end()</code> will take you right back to the initial selection and allow you to easily move up and down the DOM without additional DOM selections. Here’s an example of this in action.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"li"</span>)</span><br><span class="line">  .hide()</span><br><span class="line">  .find(<span class="string">"a"</span>).text(<span class="string">"Click me"</span>).on(<span class="string">"click"</span>,doThings).end()</span><br><span class="line">  .parent().addClass(<span class="string">"testimonial"</span>).draggable().end()</span><br><span class="line">  .fadeIn(<span class="string">"slow"</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="Responsive_Sites">Responsive Sites</h2><p>Mobile traffic is often the majority of the traffic to anything we work on. But it is a challenge to work on something which should look great on every browser you load it on. Double your estimates when you’re asked to make it responsive.</p>
+<h2 id="Responsive_Sites">Responsive Sites</h2><p>Mobile traffic is often the majority of the traffic to anything we work on. But it is a challenge to work on something which should look great on every browser you load it on.</p>
 <p>Keep in mind that IE8 and below do not do media queries. For all the rest, <a href="http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/" target="_blank" rel="external">here’s a great discussion</a> which should answer most of the questions which arise such as:</p>
 <ul>
 <li>should media queries overlap or be mutually-exclusive (answer - overlap)</li>
@@ -281,8 +281,8 @@
 </ul>
 <p>For <a href="http://responsiveimages.org/" target="_blank" rel="external">responsive images</a> we have a few options. These are the options available now as of July 2015.</p>
 <ul>
-<li>srcset</li>
-<li>Twitter Bootstrap</li>
+<li><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset" target="_blank" rel="external">srcset</a></li>
+<li><a href="http://getbootstrap.com/" target="_blank" rel="external">Twitter Bootstrap</a></li>
 </ul>
 <p>The overriding concern here is that a mobile device <em>should not</em> download images for a desktop browser unless necessary. There are some other folks who’ve done the testing, you can <a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank" rel="external">see their results here</a>. The main takeaways from these tests are:</p>
 <ol>
@@ -295,7 +295,6 @@
 <h2 id="Git/Github">Git/Github</h2><p>There’s nothing better than git for tracking changes to your bytes and your files. We are makers of files, and these files are the product we sell. So there’s no one thing as important as these files. It’s why we use git &amp; Github.</p>
 <p>When you have a solid grasp of git you will gain a sense of fearlessness, that no matter what wild experiment you might try, and no matter how radical a refactoring you might undertake, you will be able to rollback to a known good version.</p>
 <p>There are a couple of different styles of working with git. The first is to spend lots of time changing your working files and putting together all of your work for a handful of fixes or features, finally wrapping them up into one or more commits and pushing them to the remote. The other way of working with git is to make many mindless commits throughout the work day, and then refashion your silly commits into a small set of sensible and logical commits.</p>
-<p>Branches should have a ticket number in the name, if working from a list of issues in Jira.</p>
 <p><strong>Do not</strong> use <code>git push --force</code>.</p>
 <p>Except for <code>git cherry-pick</code> avoid relying on git commands which feature a hyphen in the name. These kinds of commands are mainly aimed at those implementing changes to git itself, or to projects which are making tools for git. They’re referred to as “plumbing commands” in this <a href="https://git-scm.com/docs" target="_blank" rel="external">excellent cheatsheet of the major git commands</a>.</p>
 <h3 id="Merging">Merging</h3><p>Yes merging is hard. But if you’ve ever tried branching and merging in other source-control tools (SVN I’m looking at you!) then you know it is 10x worse with those tools. Git was made with easy branching &amp; merging in mind.</p>
@@ -328,23 +327,21 @@
 <p>“But…but…what if I need changes made to another branch in my own branch?”</p>
 <p>Then find those commits using <code>git log</code> and use <code>git cherry-pick &lt;commit&gt;</code> to pluck bits and pieces of another branch onto your own branch.</p>
 <p>And to those who aren’t very good with git, let’s look at a couple of things you can do with git which might spur you to learn more…</p>
-<h3 id="The_Top_10_Git_Commands_You_(Maybe)_Aren’t_Using">The Top 10 Git Commands You (Maybe) Aren’t Using</h3><ol>
-<li><code>git checkout &lt;ref&gt;</code></li>
-<li><code>git diff &lt;ref&gt; &lt;ref&gt;</code></li>
-<li><code>git stash</code></li>
-<li><code>git stash pop</code></li>
-<li><code>git log -S</code></li>
-<li><code>git add -i</code></li>
-<li><code>git blame</code></li>
-<li><code>git fetch</code></li>
-<li><code>git cherry-pick</code></li>
+<h3 id="The_Best_Git_Commands_You_(Maybe)_Aren’t_Using">The Best Git Commands You (Maybe) Aren’t Using</h3><ol>
+<li><code>git checkout &lt;ref&gt;</code> - where <ref> is the first few characters of a hash</ref></li>
+<li><code>git diff &lt;ref&gt; &lt;ref&gt;</code> - where <ref> is any commit-ish thing, a hash or branch name</ref></li>
+<li><code>git stash</code> - save off any changes without committing them</li>
+<li><code>git stash pop</code> - an undo of the command above</li>
+<li><code>git add -i</code> - add specific blocks to your commit</li>
+<li><code>git blame</code> - see who did what in any file</li>
+<li><code>git fetch</code> - it is <em>always safe</em> to fetch</li>
+<li><code>git cherry-pick &lt;hash&gt;</code> - pluck individual commits from any branch</li>
 </ol>
 <h3 id="Stupid_Git_Tricks">Stupid Git Tricks</h3><h4 id="git_show"><code>git show</code></h4><p>If you want to look at a previous version of a file you can use this command. The command looks like this: <code>git show &lt;ref&gt;:path/to/some/file</code>. As in previous examples, you must replace “<ref>“ with any branch name or commit hash. You can combine this command with unix file-redirection operators to easily replace the current version of some file with a version of the same file from a previous commit: <code>git show &lt;ref&gt;:path/to/some/file &gt; path/to/some/file</code></ref></p>
 <h4 id="git_bisect_(actually_git_checkout)"><code>git bisect</code> (actually <code>git checkout</code>)</h4><p>Use this technique to hunt down the source of a bug or regressed bug. This is <em>not actually</em> going to use <code>git bisect</code>, this is the Poor Man’s version of bisect, using a series of <code>git checkout</code> commands to search through the history for the exact commit which caused the bug.</p>
-<h4 id="git_add_-i"><code>git add -i</code></h4><p>Use this command to select chunks of code from files to add to the staging area. If your file contains changes related to multiple bugfixes or features, you can use <code>git add -i</code> to hand-craft a commit which addresses just one of those fixes.</p>
 <h4 id="Empty_directories">Empty directories</h4><p>  git <strong>does not save directories</strong>. only files. use <code>mkdir &lt;dir-name&gt; &amp;&amp; touch &lt;dir-name&gt;/empty &amp;&amp; git add ./&lt;dir-name&gt;</code> to keep an empty folder around in git. this makes your new directory and writes a 0KB file to the folder.</p>
 <h3 id="Oh_Noes_My_Repo_is_Messed_Up">Oh Noes My Repo is Messed Up</h3><p><a href="http://justinhileman.info/article/git-pretty/git-pretty.png" target="_blank" rel="external">See the flow-chart here</a> on how you should proceed if your local repository is an unfixable mess.</p>
-<p><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/" target="_blank" rel="external">The Best Git Reference Out There</a></p>
+<p><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/" target="_blank" rel="external">Probably the Best Git Reference Out There</a></p>
 <h2 id="Build_Tools">Build Tools</h2><p>Yeoman is the tool of choice for keeping things consistent between different developers. A theme running throughout this document is that we ought to use machines to do the things which we are not good at doing.</p>
 <p>We also have published a guide to using <a href="https://slack-files.com/T02G6V7FQ-F05008XEZ-d34a50363b" target="_blank" rel="external">Yeoman on Windows</a>. </p>
 <p>Presently we have 2 of our own generators which you should use when appropriate:</p>
@@ -361,7 +358,7 @@
 <li>stage</li>
 <li>production</li>
 </ul>
-<p>A <em>release</em> moves from dev to stage and then once tested there, into the production environment. <strong>Do not</strong> make fiddly little changes when QA is in the middle of testing your work.</p>
+<p>A <em>release</em> moves from dev to stage and then once tested there, into the production environment. <em>Do not</em> make fiddly little changes when QA is in the middle of testing your work.</p>
 <h4 id="Supported_Browsers_&amp;_Devices">Supported Browsers &amp; Devices</h4><p>This is often times dictated by what’s in the Statement of Work (SOW), but when it is not you should target the following devices and browsers.</p>
 <ul>
 <li>IE 10 / 11</li>
@@ -433,7 +430,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/16/best-practices/" data-id="ciccct3j800000c98jltdoeed" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/16/best-practices/" data-id="cicceol360000ui98qgwmqu0y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/back-end/">back-end</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/front-end/">front-end</a></li></ul>
