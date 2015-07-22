@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | Joystick Interactive</title>
+  <title>Responsive | Joystick Interactive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Joystick Interactive">
-<meta property="og:url" content="http://joystickinteractive.github.io/dev/archives/2015/index.html">
+  <meta name="description" content="Responsive SitesMobile traffic is often the majority of the traffic to anything we work on. But it is a challenge to work on something which should look great on every browser you load it on.
+Keep in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive">
+<meta property="og:url" content="http://joystickinteractive.github.io/dev/2015/07/22/responsive/index.html">
 <meta property="og:site_name" content="Joystick Interactive">
-<meta property="og:description">
+<meta property="og:description" content="Responsive SitesMobile traffic is often the majority of the traffic to anything we work on. But it is a challenge to work on something which should look great on every browser you load it on.
+Keep in">
+<meta property="og:updated_time" content="2015-07-22T16:45:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Joystick Interactive">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Responsive">
+<meta name="twitter:description" content="Responsive SitesMobile traffic is often the majority of the traffic to anything we work on. But it is a challenge to work on something which should look great on every browser you load it on.
+Keep in">
   
   
     <link rel="icon" href="/favicon.png">
@@ -149,153 +153,82 @@
   
 </aside>
         
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/dev/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/dev/2015/07/22/best-practices/" class="archive-article-date">
-  <time datetime="2015-07-22T22:56:14.000Z" itemprop="datePublished">Jul 22</time>
+        <section id="main"><article id="post-responsive" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/dev/2015/07/22/responsive/" class="article-date">
+  <time datetime="2015-07-22T16:40:03.000Z" itemprop="datePublished">2015-07-22</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/dev/2015/07/22/best-practices/">Best Practices</a>
+    <h1 class="article-title" itemprop="name">
+      Responsive
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/dev/2015/07/22/git/" class="archive-article-date">
-  <time datetime="2015-07-22T16:41:10.000Z" itemprop="datePublished">Jul 22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/dev/2015/07/22/git/">Git</a>
-    </h1>
-  
+        <h2 id="Responsive_Sites">Responsive Sites</h2><p>Mobile traffic is often the majority of the traffic to anything we work on. But it is a challenge to work on something which should look great on every browser you load it on.</p>
+<p>Keep in mind that IE8 and below do not do media queries. For all the rest, <a href="http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/" target="_blank" rel="external">here’s a great discussion</a> which should answer most of the questions which arise such as:</p>
+<ul>
+<li>should media queries overlap or be mutually-exclusive (answer - overlap)</li>
+<li>should a site be mobile-first or desktop-first (probably mobile-first)</li>
+</ul>
+<p>For <a href="http://responsiveimages.org/" target="_blank" rel="external">responsive images</a> we have a few options. These are the options available now as of July 2015.</p>
+<ul>
+<li><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset" target="_blank" rel="external">srcset</a></li>
+<li><a href="http://getbootstrap.com/" target="_blank" rel="external">Twitter Bootstrap</a></li>
+</ul>
+<p>The overriding concern here is that a mobile device <em>should not</em> download images for a desktop browser unless necessary. There are some other folks who’ve done the testing, you can <a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank" rel="external">see their results here</a>. The main takeaways from these tests are:</p>
+<ol>
+<li>Use <code>background-image</code> liberally</li>
+<li>Use <code>display: none</code> on the parents of elements with a <code>background-image</code></li>
+</ol>
+<p>Here’s what the code will look like for this</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id="test3"&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">#test3 div &#123;</span><br><span class="line">    background-image:url('images/test3.png');</span><br><span class="line">    width:200px;</span><br><span class="line">    height:75px;</span><br><span class="line">&#125;</span><br><span class="line">@media all and (max-width: 600px) &#123;</span><br><span class="line">    #test3 &#123;</span><br><span class="line">        display:none;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The <a href="https://github.com/tkadlec/Media-Query-test" target="_blank" rel="external">test suite is available here</a>.</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/dev/2015/07/22/responsive/" class="archive-article-date">
-  <time datetime="2015-07-22T16:40:03.000Z" itemprop="datePublished">Jul 22</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/dev/2015/07/22/responsive/">Responsive</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/dev/2015/07/22/operations/" class="archive-article-date">
-  <time datetime="2015-07-22T16:38:52.000Z" itemprop="datePublished">Jul 22</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/responsive/" data-id="cicf0ldjb0009ta98oxe0gzo2" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/dev/2015/07/22/operations/">Operations</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/dev/2015/07/22/testing/" class="archive-article-date">
-  <time datetime="2015-07-22T16:38:48.000Z" itemprop="datePublished">Jul 22</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/dev/2015/07/22/testing/">Testing</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/front-end/">front-end</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/dev/2015/07/22/build-tools/" class="archive-article-date">
-  <time datetime="2015-07-22T16:38:42.000Z" itemprop="datePublished">Jul 22</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/dev/2015/07/22/build-tools/">Build Tools</a>
-    </h1>
+    <a href="/dev/2015/07/22/git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git
+        
+      </div>
+    </a>
   
+  
+    <a href="/dev/2015/07/22/operations/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Operations</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/dev/2015/07/22/front-end-best-practices/" class="archive-article-date">
-  <time datetime="2015-07-22T16:36:26.000Z" itemprop="datePublished">Jul 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/dev/2015/07/22/front-end-best-practices/">Front End Best Practices</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 </section>
       </div>
       <footer id="footer">
