@@ -221,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/best-practices/" data-id="cicf0ldjm000sta98q1cke4tq" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/best-practices/" data-id="cicgn8kra000sgk988pkbdb85" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li></ul>
@@ -305,11 +305,15 @@
 <h4 id="Empty_directories">Empty directories</h4><p>  git <strong>does not save directories</strong>. only files. use <code>mkdir &lt;dir-name&gt; &amp;&amp; touch &lt;dir-name&gt;/empty &amp;&amp; git add ./&lt;dir-name&gt;</code> to keep an empty folder around in git. this makes your new directory and writes a 0KB file to the folder.</p>
 <h3 id="Oh_Noes_My_Repo_is_Messed_Up">Oh Noes My Repo is Messed Up</h3><p><a href="http://justinhileman.info/article/git-pretty/git-pretty.png" target="_blank" rel="external">See the flow-chart here</a> on how you should proceed if your local repository is an unfixable mess.</p>
 <p><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/" target="_blank" rel="external">Probably the Best Git Reference Out There</a></p>
+<h3 id="Danger_Zones">Danger Zones</h3><p>Git will mostly solve more problems than it causes. But there are a couple of things you can do with git that are going to turn out badly.</p>
+<p><code>git reset --hard</code> for instance, will wipe out any work-in-progress which hasn’t been committed. Though there are times when nothing else will do but <code>git reset --hard</code>.</p>
+<p>As mentioned above, <code>git rebase</code> can also be a source of trouble. </p>
+<p>Finally, there’s the old <code>git push origin &lt;branch&gt; --force</code> which is never a good idea.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/git/" data-id="cicf0ldjf000hta98pwrip3nm" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/git/" data-id="cicgn8kr4000hgk987irm8831" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/github/">github</a></li></ul>
@@ -366,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/responsive/" data-id="cicf0ldjb0009ta98oxe0gzo2" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/responsive/" data-id="cicgn8kr00009gk98ll7blplq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/front-end/">front-end</a></li></ul>
@@ -422,7 +426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/operations/" data-id="cicf0ldjd000dta98yieizgs4" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/operations/" data-id="cicgn8kr2000dgk98s5l7bdun" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/dev-ops/">dev-ops</a></li></ul>
@@ -478,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/testing/" data-id="cicf0ldj80003ta98wpegr5co" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/testing/" data-id="cicgn8kqx0003gk98s8z69b1h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/qa/">qa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/testing/">testing</a></li></ul>
@@ -516,14 +520,13 @@
 <p>We also have published a guide to using <a href="https://slack-files.com/T02G6V7FQ-F05008XEZ-d34a50363b" target="_blank" rel="external">Yeoman on Windows</a>. </p>
 <p>Presently we have 2 of our own generators which you should use when appropriate:</p>
 <ul>
-<li><a href="https://github.com/joystickinteractive/generator-undertone" target="_blank" rel="external">Undertone</a></li>
 <li><a href="https://github.com/joystickinteractive/generator-doubleclick-studio" target="_blank" rel="external">Doubleclick Studio</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/build-tools/" data-id="cicf0ldjk000qta98mo1db1cc" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/build-tools/" data-id="cicgn8kr9000qgk984fo6says" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li></ul>
@@ -680,7 +683,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/front-end-best-practices/" data-id="cicf0ldji000nta98i7pjop69" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/front-end-best-practices/" data-id="cicgn8kr6000ngk987ak5gopz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/front-end/">front-end</a></li></ul>

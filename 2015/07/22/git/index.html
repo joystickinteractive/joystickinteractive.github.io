@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://joystickinteractive.github.io/dev/2015/07/22/git/index.html">
 <meta property="og:site_name" content="Joystick Interactive">
 <meta property="og:description" content="Git/GithubThere’s nothing better than git for tracking changes to your bytes and your files. We are makers of files, and these files are the product we sell. So there’s no one thing as important as th">
-<meta property="og:updated_time" content="2015-07-22T16:43:56.000Z">
+<meta property="og:updated_time" content="2015-07-23T20:19:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="Git/GithubThere’s nothing better than git for tracking changes to your bytes and your files. We are makers of files, and these files are the product we sell. So there’s no one thing as important as th">
@@ -222,11 +222,15 @@
 <h4 id="Empty_directories">Empty directories</h4><p>  git <strong>does not save directories</strong>. only files. use <code>mkdir &lt;dir-name&gt; &amp;&amp; touch &lt;dir-name&gt;/empty &amp;&amp; git add ./&lt;dir-name&gt;</code> to keep an empty folder around in git. this makes your new directory and writes a 0KB file to the folder.</p>
 <h3 id="Oh_Noes_My_Repo_is_Messed_Up">Oh Noes My Repo is Messed Up</h3><p><a href="http://justinhileman.info/article/git-pretty/git-pretty.png" target="_blank" rel="external">See the flow-chart here</a> on how you should proceed if your local repository is an unfixable mess.</p>
 <p><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/" target="_blank" rel="external">Probably the Best Git Reference Out There</a></p>
+<h3 id="Danger_Zones">Danger Zones</h3><p>Git will mostly solve more problems than it causes. But there are a couple of things you can do with git that are going to turn out badly.</p>
+<p><code>git reset --hard</code> for instance, will wipe out any work-in-progress which hasn’t been committed. Though there are times when nothing else will do but <code>git reset --hard</code>.</p>
+<p>As mentioned above, <code>git rebase</code> can also be a source of trouble. </p>
+<p>Finally, there’s the old <code>git push origin &lt;branch&gt; --force</code> which is never a good idea.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/git/" data-id="cicf0ldjf000hta98pwrip3nm" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/git/" data-id="cicgn8kr4000hgk987irm8831" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/github/">github</a></li></ul>
