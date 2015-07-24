@@ -221,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/best-practices/" data-id="cicgnd0dp000spk985sxofq23" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/best-practices/" data-id="cici0opfz000sr098842hjf0q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li></ul>
@@ -282,6 +282,13 @@
 <h3 id="Workflow_(Fork-Flow)">Workflow (Fork-Flow)</h3><p>There are many different ways to use git. The main one which we prefer is based on forking repos on Github. Whenever a new developer begins on a project she should fork the existing repository. When she has commits which need to make it into the project, the developer should kick-off a “pull request”. Whoever is the lead on the project is responsible for merging in the pull requests. The “fork-flow” model is the dominant model of collaboration on Github.</p>
 <p>For more info on this workflow see the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow" target="_blank" rel="external">fork-flow details here</a>. </p>
 <p>If you are the Lead Developer and find the number of pull requests to be overwhelming, you <a href="https://github.com/shykes/gordon" target="_blank" rel="external">might look into tools like Gordon</a>.</p>
+<h3 id="Getting_Upstream_Commits">Getting Upstream Commits</h3><p>When you have a fork of a repository and want to get the latest from the original repo (called the “upstream” repo), you can use the following commands:</p>
+<ol>
+<li><code>cd into/cloned/fork-repo</code></li>
+<li><code>git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git</code></li>
+<li><code>git fetch upstream</code></li>
+<li><code>git pull upstream master</code></li>
+</ol>
 <h3 id="Sharing_Work">Sharing Work</h3><p>This is done quite easily using branches. If Bob wants to pickup Alice’s latest work, maybe to help out with a quirky bug, it’s as simple as <code>git fetch origin alice</code> and then a <code>git checkout -b alice origin/alice</code>. Then Bob can hack away and commit/push the branch to share these updates with Alice.</p>
 <p>When working in the fork-flow model, sharing is a matter of adding <em>remotes</em>. This might be new to you, but the commands are actually quite simple. You use <code>git remote add &lt;name&gt; &lt;url&gt;</code>. <strong>Note</strong> this does not always work great with the office Github app. Just one more reason to use the command-line.</p>
 <h3 id="The_Problems_with_Rebase">The Problems with Rebase</h3><p>Rebasing has the potential to change history. And this is in direct opposition to what Version Control Systems are supposed to do. The main problem with rebase is that it is hard for git newbies to learn. And it is dangerous. It seems the main argument in favor of rebasing is to avoid merge commits in the history.</p>
@@ -313,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/git/" data-id="cicgnd0dj000hpk98dh4ob51d" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/git/" data-id="cici0opft000hr098unwbd53d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/github/">github</a></li></ul>
@@ -370,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/responsive/" data-id="cicgnd0df0009pk98h04f6gza" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/responsive/" data-id="cici0opfp0009r0980e7qyu9u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/front-end/">front-end</a></li></ul>
@@ -426,7 +433,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/operations/" data-id="cicgnd0dh000dpk98gu9ls6eh" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/operations/" data-id="cici0opfr000dr09814ly8yc3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/dev-ops/">dev-ops</a></li></ul>
@@ -482,7 +489,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/testing/" data-id="cicgnd0dc0003pk989izz86wl" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/testing/" data-id="cici0opfn0003r098cxv4vqhx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/qa/">qa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/testing/">testing</a></li></ul>
@@ -526,7 +533,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/build-tools/" data-id="cicgnd0do000qpk988di9c16x" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/build-tools/" data-id="cici0opfy000qr098n2kwgxm1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li></ul>
@@ -683,7 +690,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/front-end-best-practices/" data-id="cicgnd0dl000npk98xy53cc4s" class="article-share-link">Share</a>
+      <a data-url="http://joystickinteractive.github.io/dev/2015/07/22/front-end-best-practices/" data-id="cici0opfv000nr098tkrpgq6m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/best-practices/">best-practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/dev/tags/front-end/">front-end</a></li></ul>
